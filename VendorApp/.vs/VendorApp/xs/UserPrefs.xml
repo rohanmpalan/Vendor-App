@@ -1,0 +1,41 @@
+﻿<Properties>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VendorApp/MainPage.xaml">
+    <Files>
+      <File FileName="VendorApp/Extension/AppBuilder.cs" Line="4" Column="25" />
+      <File FileName="VendorApp/Extension/BindingContextExtension.cs" Line="19" Column="6" />
+      <File FileName="VendorApp/Extension/SafeFireAndForgetExtensions.cs" Line="14" Column="1" />
+      <File FileName="VendorApp/Extension/ServiceHelper.cs" Line="4" Column="38" />
+      <File FileName="VendorApp/ViewModel/BaseViewModel.cs" Line="72" Column="57" />
+      <File FileName="VendorApp/Infrastructure/BaseObservableObject.cs" Line="30" Column="56" />
+      <File FileName="VendorApp/Interface/INavigationService.cs" Line="6" Column="1" />
+      <File FileName="VendorApp/Service/NavigationService.cs" Line="20" Column="45" />
+      <File FileName="VendorApp/Constant/ApplicationConstant.cs" Line="10" Column="1" />
+      <File FileName="VendorApp/ViewModel/MainPageViewModel.cs" Line="13" Column="1" />
+      <File FileName="VendorApp/MainPage.xaml" Line="13" Column="27" />
+      <File FileName="VendorApp/MauiProgram.cs" Line="9" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VendorApp" expanded="True">
+            <Node name="VendorApp" expanded="True">
+              <Node name="Constant" expanded="True" />
+              <Node name="Extension" expanded="True" />
+              <Node name="Infrastructure" expanded="True" />
+              <Node name="Interface" expanded="True" />
+              <Node name="Service" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+              <Node name="MainPage.xaml" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

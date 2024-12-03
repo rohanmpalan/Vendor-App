@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VendorApp.ViewModel"
+             xmlns:extensions="clr-namespace:VendorApp.Extension"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Name="Page"
+             x:Class="VendorApp.MainPage">
+     <ContentPage.BindingContext>
+        <extensions:BindingContextExtension x:TypeArguments="vm:MainPageViewModel" />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <SearchBar HeightRequest="50" Text="{Binding SearchText}" Placeholder="Search vendor" BackgroundColor="white" >
+                 <!-- <SearchBar.Behaviors>
+            <toolkit:EventToCommandBehavior
+                EventName="TextChanged"
+                Command="{Binding Source={x:Reference Page}, Path=BindingContext.SearchVendorCommand}" />
+            </SearchBar.Behaviors> -->
+        </SearchBar>
+            <!-- <Grid Margin="20"> -->
+        <CollectionView x:Name="collectionView"
+                         ItemsSource="{Binding FiliteredVendorList}"
+                         SelectionMode="Single"
+                         SelectionChangedCommand="{Binding SelectionChangedCommand}"
+                         SelectionChangedCommandParameter="{Binding Path=SelectedItem, Source={x:Reference collectionView}}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnSpacing="20" Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2" 
+                               Source="avatar.png" 
+                               Aspect="AspectFill"
+                               HeightRequest="60" 
+                               WidthRequest="60" />
+                        <Label Grid.Column="1"
+                               Grid.RowSpan="2"
+                               Text="{Binding Name}" 
+                               VerticalOptions="Center"
+                               FontAttributes="Bold" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
